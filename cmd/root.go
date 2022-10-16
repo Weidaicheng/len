@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/Weidaicheng/len/pkg/length"
@@ -17,7 +18,7 @@ var rootCmd = &cobra.Command{
 	SilenceErrors:         true,
 	DisableFlagsInUseLine: true,
 	Run: func(cmd *cobra.Command, args []string) {
-		length.Print(args)
+		fmt.Println(length.GetLen(args[0]))
 	},
 }
 
